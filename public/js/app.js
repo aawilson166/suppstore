@@ -1,3 +1,8 @@
+//for buy button must make schema require a number then update seed data and then make a function or do math in curly braces
+const buyProduct = () => {
+    product.quantity --
+}
+
 class App extends React.Component {
 	state = {
 		item: '',
@@ -126,11 +131,12 @@ class App extends React.Component {
 					{this.state.products.map(product => {
 						return (
 							<div className='productCard' key={product._id}>
-								{product.name} <br />
-								{product.species} <br />
-								<img src={product.image} alt={product.name} /> <br />
-								<button value={product._id} onClick={this.deleteProduct}>
-									Delete Product
+								{product.item} <br />
+								{product.price} <br />
+                                Quantity: {product.quantity} <br />
+								<img src={product.image} alt={product.item} /> <br />
+                                <button value={product._id} onClick={product.quantity}>
+									Buy Product
 								</button>
 								<details>
 									<summary>Update this Product</summary>
@@ -167,6 +173,9 @@ class App extends React.Component {
 											value='Update Product'
 										/>
 									</form>
+                                    <button value={product._id} onClick={this.deleteProduct}>
+									Delete Product
+								</button>
 								</details>
 							</div>
 						);

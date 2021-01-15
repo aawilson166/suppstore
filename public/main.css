@@ -1,0 +1,14 @@
+img {
+    height: 10rem;
+    width: 10rem;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.productCard {
+    margin: 1rem;
+}
