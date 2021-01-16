@@ -67,7 +67,7 @@ class App extends React.Component {
 
 	render = () => {
 		return (
-			<div>
+			<div className ="container">
 				<div>
 					<h2>Products</h2>
 					<div className='new-product-form'>
