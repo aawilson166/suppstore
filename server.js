@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 const productsController = require('./controllers/products_controller.js')
-app.use('/products', productsController)
+app.use('/products/', productsController)
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,

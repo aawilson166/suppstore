@@ -1,3 +1,14 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import './main.css';
+// import registerServiceWorker from './registerServiceWorker';
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+//
+// import Button from 'react-bootstrap/Button'
+
+
 class App extends React.Component {
 	state = {
 		item: '',
@@ -62,7 +73,7 @@ class App extends React.Component {
 
 	render = () => {
 		return (
-			<div>
+			<div className ="container">
 				<div>
 					<h2>Products</h2>
 					<div className='new-product-form'>
@@ -128,7 +139,8 @@ class App extends React.Component {
 							<div className='productCard' key={product._id}>
 								{product.name} <br />
 								{product.species} <br />
-								<img src={product.image} alt={product.name} /> <br />
+								<img src={product.image} alt={product.name} />
+								<br />
 								<button value={product._id} onClick={this.deleteProduct}>
 									Delete Product
 								</button>
