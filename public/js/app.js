@@ -1,6 +1,6 @@
 //for buy button must make schema require a number then update seed data and then make a function or do math in curly braces
 const buyProduct = () => {
-    product.quantity --
+    quantity -=1
 }
 
 class App extends React.Component {
@@ -54,7 +54,9 @@ class App extends React.Component {
 				image: ''
 			});
 		});
-	};
+    };
+    
+    
 
 	//this function renders the info from the database onto the webpage on load
 	componentDidMount = () => {
@@ -135,7 +137,7 @@ class App extends React.Component {
 								{product.price} <br />
                                 Quantity: {product.quantity} <br />
 								<img src={product.image} alt={product.item} /> <br />
-                                <button value={product._id} onClick={product.quantity}>
+                                <button value={product._id} onClick={console.log(product.quantity)}>
 									Buy Product
 								</button>
 								<details>

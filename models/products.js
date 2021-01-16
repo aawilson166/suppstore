@@ -3,7 +3,7 @@ const productSchema = new mongoose.Schema(
     {
         item: String,
         price: String,
-        quantity: String,
+        quantity: Number,
         image: {type: String, default: 'https://www.iphonetechnicians.com/wp-content/uploads/2020/10/image-coming-soon-placeholder.png'}
     }
 )
