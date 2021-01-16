@@ -1,4 +1,4 @@
-//for buy button must make schema require a number then update seed data and then make a function or do math in curly braces
+//for buy button must make schema require a number then update seed data and then make a function or do math in curly braces testing push & merge
 const buyProduct = () => {
     quantity -=1
 }
