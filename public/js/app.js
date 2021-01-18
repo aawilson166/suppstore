@@ -1,7 +1,4 @@
 //for buy button must make schema require a number then update seed data and then make a function or do math in curly braces testing push & merge
-const buyProduct = () => {
-    quantity -=1
-}
 
 class App extends React.Component {
 	state = {
@@ -56,6 +53,11 @@ class App extends React.Component {
 		});
     };
     
+    // buyProduct = event => {
+    //     this.setState({
+    //     [event.target.quantity]: event.target.quantity-=1
+    //     })
+    // }
     
 
 	//this function renders the info from the database onto the webpage on load
@@ -65,7 +67,9 @@ class App extends React.Component {
 				products: response.data
 			});
 		});
-	};
+    };
+    
+
 
 	render = () => {
 		return (
@@ -137,9 +141,9 @@ class App extends React.Component {
 								{product.price} <br />
                                 Quantity: {product.quantity} <br />
 								<img src={product.image} alt={product.item} /> <br />
-                                <button value={product._id} onClick={console.log(product.quantity)}>
+                                {/* <button value={product._id} onClick={this.buyProduct}>
 									Buy Product
-								</button>
+								</button> */}
 								<details>
 									<summary>Update this Product</summary>
 									<form id={product._id} onSubmit={this.updateProduct}>
